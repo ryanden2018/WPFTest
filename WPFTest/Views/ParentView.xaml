@@ -1,0 +1,25 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Views="clr-namespace:WPFTest.Views"
+             xmlns:ViewModels="clr-namespace:WPFTest.ViewModels"
+             xmlns:Controls="clr-namespace:WPFTest.Controls" x:Class="WPFTest.Views.ParentView"
+             mc:Ignorable="d" 
+             d:DesignHeight="230" d:DesignWidth="560">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type ViewModels:ParentViewModel}">
+            <Views:ParentView />
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <ViewModels:ParentViewModel x:Name="ParentViewModel" />
+    </UserControl.DataContext>
+    <Grid>
+        <Label Content="{Binding Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+
+        <Controls:Child x:Name="Child" HorizontalAlignment="Left" Height="180" VerticalAlignment="Top" Width="540" Margin="10,41,0,0"/>
+
+    </Grid>
+</UserControl>

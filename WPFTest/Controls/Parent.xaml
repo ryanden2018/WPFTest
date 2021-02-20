@@ -1,0 +1,14 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Views="clr-namespace:WPFTest.Views" x:Class="WPFTest.Controls.Parent"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="580">
+    <Grid>
+
+        <Views:ParentView x:Name="ParentView" HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="560" Margin="10,10,0,0"/>
+
+    </Grid>
+</UserControl>
